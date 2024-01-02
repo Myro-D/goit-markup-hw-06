@@ -1,3 +1,6 @@
+.hide {
+  display: none;
+}
 :root {
   --white-color: #ffffff;
   --iris-color: #4d5ae5;
@@ -36,7 +39,9 @@ ol {
 img {
   display: block;
 }
-
+.img-sec-three {
+  width: 100%;
+}
 body {
   font-family: 'Raleway', sans-serif;
   font-family: 'Roboto', sans-serif;
@@ -64,13 +69,37 @@ body {
 }
 
 .section {
-  padding: 120px 0;
+  /* padding-top: 48px;
+  padding-bottom: 48px; */
+
+  padding: 96px 0;
 }
+
 /* ХЕДЕР */
 .container {
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
+  max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid red;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .container.header {
   display: flex;
@@ -208,8 +237,8 @@ main {
   display: block;
 }
 .section-one {
-  max-width: 1440px;
-  margin: 0 auto;
+  /* max-width: 1440px;
+  margin: 0 auto; */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -220,9 +249,11 @@ main {
     ),
     url(../images/people-office.jpg);
 
-  padding: 188px 0;
+  padding: 72px 0;
 }
 .sec-one-h {
+  padding-left: 16px;
+  padding-right: 16px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -250,6 +281,7 @@ main {
   height: 56px;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 16px 32px;
 }
 .button-section-one:hover,
 .button-section-one:focus {
@@ -275,25 +307,45 @@ main {
 }
 .section-two-h-three {
   display: block;
-  gap: 8px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  /* font-weight: 500; */
+  /* font-size: 20px; */
   color: #2e2f42;
   margin-bottom: 8px;
+
+  text-align: center;
+
+  font-size: 36px;
+
+  font-weight: 700;
+  line-height: 1.11; /* 111.111% */
+  letter-spacing: 0.045em;
+  text-transform: capitalize;
 }
 .section-two-p {
   font-size: 16px;
-  line-height: 1.5;
+  min-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #434455;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
 }
 .about-us-list {
   display: flex;
-  gap: 24px;
+
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  /* display: flex;
+  gap: 24px; */
 }
 .about-us-item {
-  width: calc((100% - 72px) / 4);
+  /* width: calc((100% - 72px) / 4); */
 }
 .social-sec-two {
   display: flex;
@@ -309,10 +361,11 @@ main {
   border-radius: 4px;
   background-color: #f4f4fd;
 
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
 }
 
 /* SECTION THREE */
@@ -320,6 +373,7 @@ main {
   background-color: #f4f4fd;
 }
 .section-three-h-two {
+  max-width: 320px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -327,16 +381,27 @@ main {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
-  text-align: center;
   display: block;
   margin-bottom: 72px;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 768px) {
+  .section-three-h-two {
+    max-width: 768px;
+  }
 }
 .section-three-li {
+  width: 100%;
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+@media screen and (min-width: 768px) {
+  .section-three-li {
+    width: calc((100% - 24px * 1) / 2);
+  }
 }
 .section-three-h-three {
   display: block;
@@ -361,8 +426,12 @@ main {
 }
 .list-our-team {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
 }
+
 .sec-two-item {
   width: 40px;
   height: 40px;
@@ -420,7 +489,7 @@ main {
 }
 .list-portfolio {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   column-gap: 24px;
   row-gap: 48px;
 }
@@ -451,6 +520,7 @@ main {
 .box {
   position: relative;
   overflow: hidden;
+  max-width: 320px;
 }
 
 .overlay {
