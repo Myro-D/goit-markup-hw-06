@@ -214,18 +214,19 @@ header .container {
 
 .adress-link {
   font-style: normal;
-  /* font-size: 16px; */
+  font-size: 16px;
   font-style: 12px;
-  /* line-height: 1.5; */
-  /* letter-spacing: 0.02em; */
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: #434455;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: var(--SLATE, #434455);
-  /* Small Text */
-  font-family: Roboto;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
+}
+@media only screen and (min-width: 768px) {
+  .adress-link {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
 }
 .adress-link:hover,
 .adress-link:focus {
@@ -266,8 +267,6 @@ main {
   display: block;
 }
 .section-one {
-  /* max-width: 1440px;
-  margin: 0 auto; */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -280,6 +279,11 @@ main {
 
   padding: 72px 0;
 }
+@media only screen and (min-width: 768px) {
+  .section-one {
+    padding: 112px;
+  }
+}
 .sec-one-h {
   padding-left: 16px;
   padding-right: 16px;
@@ -288,12 +292,18 @@ main {
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
 
   max-width: 496px;
 
   margin: 0 auto;
   margin-bottom: 48px;
+}
+@media only screen and (min-width: 768px) {
+  .sec-one-h {
+    height: 112px;
+    letter-spacing: 0.07em;
+  }
 }
 .button-section-one {
   display: block;
@@ -364,6 +374,17 @@ main {
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
 }
+@media only screen and (min-width: 768px) {
+  .section-two-p {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .section-two-h-three {
+    text-align: left;
+  }
+}
 .about-us-list {
   display: flex;
 
@@ -397,7 +418,18 @@ main {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: none;
 }
-
+@media only screen and (min-width: 768px) {
+  .about-us-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about-us-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
 /* SECTION THREE */
 .section-three {
   background-color: #f4f4fd;
@@ -428,11 +460,7 @@ main {
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
-@media screen and (min-width: 768px) {
-  .section-three-li {
-    width: calc((100% - 24px * 1) / 2);
-  }
-}
+
 .section-three-h-three {
   display: block;
   font-weight: 500;
@@ -489,6 +517,22 @@ main {
 .a-sec-two-social:hover,
 .a-sec-two-social:focus {
   background-color: #404bbf;
+}
+@media only screen and (min-width: 768px) {
+  .list-our-team {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 72px;
+    padding-left: 108px;
+    padding-right: 108px;
+    padding-bottom: 96px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-three-li {
+    width: calc((100% - 24px) / 2);
+  }
 }
 /* SECTION FOUR */
 .section-four-h-two {
@@ -567,13 +611,32 @@ main {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media only screen and (min-width: 768px) {
+  .list-portfolio {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 72px;
 
+    padding-bottom: 96px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .item-portfolio {
+    width: calc((100% - 24px) / 2);
+  }
+}
 /* FOOTER */
 
 .foter {
   background-color: #2e2f42;
   /* padding: 100px 0; */
   padding: 96px 0;
+}
+@media only screen and (min-width: 768px) {
+  .container-footer {
+    padding: 96px 164px 96px 108px;
+  }
 }
 .logo-studio-foter {
   font-family: 'Raleway', sans-serif;
