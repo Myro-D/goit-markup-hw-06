@@ -435,8 +435,19 @@ main {
   /* display: flex;
   gap: 24px; */
 }
+@media only screen and (min-width: 1158px) {
+  .about-us-list {
+    display: flex;
+    gap: 24px;
+  }
+}
 .about-us-item {
   /* width: calc((100% - 72px) / 4); */
+}
+@media only screen and (min-width: 1158px) {
+  .about-us-item {
+    width: calc((100% - 72px) / 4);
+  }
 }
 .social-sec-two {
   display: flex;
@@ -458,6 +469,14 @@ main {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: none;
 }
+@media only screen and (min-width: 1158px) {
+  .sec-two-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .about-us-item {
     width: calc((100% - 24px) / 2);
@@ -678,6 +697,11 @@ main {
     padding: 96px 164px 96px 108px;
   }
 }
+@media only screen and (min-width: 1158px) {
+  .foter {
+    padding: 100px 0;
+  }
+}
 .logo-studio-foter {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -713,12 +737,24 @@ footer a {
   margin-left: auto;
   margin-bottom: 17px;
 }
+@media only screen and (min-width: 1158px) {
+  footer a {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+}
 .container-footer {
   display: flex;
   align-items: baseline;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (min-width: 1158px) {
+  .container-footer {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 .foot-cont-form {
   min-width: 320px;
@@ -750,6 +786,17 @@ footer a {
   /* margin-right: 80px; */
   margin: auto;
 }
+@media only screen and (min-width: 1158px) {
+  .foter-social-container {
+    margin-right: 80px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .foter-social-container {
+    margin: 0;
+    margin-right: 80px;
+  }
+}
 .p-social-footer,
 .p-sub-footer {
   font-family: 'Raleway', sans-serif;
@@ -762,11 +809,25 @@ footer a {
   margin-bottom: 16px;
   text-align: center;
 }
-
+@media only screen and (min-width: 1158px) {
+  .p-social-footer {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .p-sub-footer {
+    text-align: left;
+  }
+}
 .foter-logo-p-container {
   /* margin-right: 120px; */
   margin: auto;
   margin-bottom: 72px;
+}
+@media only screen and (min-width: 1158px) {
+  .foter-logo-p-container {
+    margin-right: 120px;
+  }
 }
 .svg-footer-social {
   fill: var(--svg-icons);
@@ -780,7 +841,18 @@ footer a {
   justify-content: center;
   /* margin-bottom: 96px; */
 }
+@media only screen and (min-width: 1158px) {
+  .form-foter-sub {
+    flex-wrap: nowrap;
+    margin-bottom: 96px;
+  }
+}
 .foot-form-label {
+}
+@media only screen and (min-width: 1158px) {
+  .foot-form-label {
+    margin-left: 80px;
+  }
 }
 .input-sub {
   border: 1px solid #ffffff;
