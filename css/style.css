@@ -1323,15 +1323,6 @@ input:checked + .checkbox-cont .span-checkbox {
 .mobile-menu-link.accent {
   color: #4d5ae5;
 }
-.mobile-menu-item {
-}
-.mobile-menu-link {
-}
-.social-mobile-menu {
-}
-.footer-social-item {
-}
-.a-footer-social {
-}
-.svg-footer-social {
+.email-mob-menu {
+  color: #434455;
 }
