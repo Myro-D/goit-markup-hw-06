@@ -301,6 +301,11 @@ header {
   width: 100%;
   color: #404bbf;
 }
+@media only screen and (min-width: 768px) {
+  .nav-item.active::after {
+    bottom: -9px;
+  }
+}
 @media only screen and (min-width: 1158px) {
   .nav-item.active::after {
     bottom: -3px;
@@ -1205,6 +1210,7 @@ input::placeholder {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-caption {
+  width: 256px;
   color: #2e2f42;
   text-align: center;
   font-family: Roboto;
@@ -1215,6 +1221,15 @@ input::placeholder {
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
+@media only screen and (min-width: 768px) {
+  .modal-caption {
+    width: 360px;
+  }
+}
+/* @media only screen and (min-width: 1158px) {
+  .modal-caption {
+  }
+} */
 .modal-form {
 }
 .field {
@@ -1279,6 +1294,17 @@ input::placeholder {
 .cont-label-checkbox {
   margin-bottom: 24px;
 }
+.cont-test {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.cont-test-two {
+  padding-top: 8px;
+}
 .checkbox-cont {
   display: block;
   color: var(--modal-label);
@@ -1313,9 +1339,13 @@ input::placeholder {
   line-height: 16px;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
-  padding-left: 3px;
+  /* padding-left: 3px; */
 }
-
+@media only screen and (min-width: 768px) {
+  .privacy-policy {
+    padding-left: 3px;
+  }
+}
 .checkbox:active {
   fill: #404bbf;
 }
@@ -1335,6 +1365,7 @@ input::placeholder {
 }
 
 .svg-checkbox {
+  padding-top: 8px;
   opacity: 0;
 }
 input:checked + .checkbox-cont .span-checkbox {
